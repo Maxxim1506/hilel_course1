@@ -1,11 +1,22 @@
 <?php
-// function takes_array($arr)
-// {
-//     var_dump($arr);
-// }
-// $firstarr = array(1 => 'one', [1 => 'one', 2 => 'two', 3 => 'three'], [1 => 'one', 2 => 'two', 3 => 'three', 4 => 'four']);
-// takes_array($firstarr);
-
+$firstArr = [
+'one' => 1,
+'two' => [
+  	'one' => 1,
+  	'seven' => 22,
+  	'three' => 32,
+  ],
+'three' => [
+	'one' => 1,
+	'two' => 2,
+ ],
+'foure' => 5,
+'five' => [
+   'three' => 32,
+   'foure' => 5,
+   'five' => 12,
+],  
+];
 $str = 'bbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbb';
 
 function counterB($str)
