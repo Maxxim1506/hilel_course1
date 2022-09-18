@@ -48,3 +48,12 @@ function counterValues($array)
 	return $sum;
 }
 var_dump(counterValues($firstArr1));
+
+function squareSize($big, $small)
+{
+	$a = pow($big, 2);
+	$b = pow($small, 2);
+	$result = $a / $b;
+	return floatval($result);
+}
+var_dump(squareSize(7, 3));
