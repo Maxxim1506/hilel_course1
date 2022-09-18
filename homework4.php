@@ -17,6 +17,12 @@ $firstArr = [
    'five' => 12,
 ],  
 ];
+
+function counterEll($value)
+{
+
+}
+
 $str = 'bbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbb';
 
 function counterB($str)
