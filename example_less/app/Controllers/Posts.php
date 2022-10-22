@@ -16,6 +16,13 @@ class Posts implements ControllerInterface {
 
     public function edit()
     {
-         var_dump('i am home\edit');
+        $result = array_filter($_POST);
+        var_dump($result);
+        if (!empty($result)) {
+            $obj = new ModelPosts();
+            $obj->createPost($result);
+        }
+        $path = 'Posts' . DIRECTORY_SEPARATOR . 'create';
+        View::generate($path);
     }
 }
