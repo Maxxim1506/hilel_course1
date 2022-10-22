@@ -16,6 +16,14 @@ class User implements ControllerInterface {
 
     public function edit()
     {
-         var_dump('i am home\edit');
+        $result = array_filter($_POST);
+        var_dump($result);
+        if (!empty($result)) {
+            $obj = new ModelUsers();
+            $obj->createUser($result);
+        }
+        $path = 'User' . DIRECTORY_SEPARATOR . 'Insert';
+        var_dump($path);
+        View::generate($path);
     }
 }
