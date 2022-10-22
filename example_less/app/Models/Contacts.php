@@ -3,6 +3,7 @@ namespace App\Models;
 use Core\orm\Select;
 use Core\orm\Insert;
 
+// homework
 class Contacts
 {
     public function getAll (): array {

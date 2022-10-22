@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\Posts as ModelPosts;
 use Core\View;
-
+// homework
 class Posts implements ControllerInterface {
 
     public function index()

@@ -5,7 +5,7 @@ use App\Models\User as ModelUsers;
 use Core\View;
 
 class User implements ControllerInterface {
-
+// homework
     public function index()
     {
        $obj = new ModelUsers();

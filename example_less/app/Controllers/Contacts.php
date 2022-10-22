@@ -5,6 +5,7 @@ use App\Models\Contacts as ModelContacts;
 use Core\View;
 
 class Contacts implements ControllerInterface {
+    //homework
 
     public function index()
     {

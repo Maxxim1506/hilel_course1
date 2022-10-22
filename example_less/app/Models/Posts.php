@@ -2,6 +2,8 @@
 namespace App\Models;
 use Core\orm\Select;
 use Core\orm\Insert;
+
+// homework
 class Posts
 {
     public function getAll (): array {
