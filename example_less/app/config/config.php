@@ -12,5 +12,7 @@ return [
     'user/edit'=> 'User:edit',
     'contacts'=>'Contacts:index',
     'posts'=>'Posts:index',
+    'login'=>'AuthController:login',
+    'register'=>'AuthController:register',
 ];
 // homework

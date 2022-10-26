@@ -30,6 +30,7 @@ class ComposerStaticInitb612e0b11a77d939ae9b8b9a169384fc
 
     public static $classMap = array (
         'App\\Controllers\\Admin' => __DIR__ . '/../..' . '/app/Controllers/Admin.php',
+        'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Controllers/AuthController.php',
         'App\\Controllers\\Contacts' => __DIR__ . '/../..' . '/app/Controllers/Contacts.php',
         'App\\Controllers\\ControllerInterface' => __DIR__ . '/../..' . '/app/Controllers/ControllerInterface.php',
         'App\\Controllers\\Err404' => __DIR__ . '/../..' . '/app/Controllers/Err404.php',

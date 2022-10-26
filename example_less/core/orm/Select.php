@@ -6,6 +6,7 @@ class Select
 {
 	protected $tableName;
 	protected $columns = '*';
+	protected $where = '';
 
 	public function getTableName()
 	{
@@ -15,6 +16,16 @@ class Select
 	public function setTableName($tableName): void
 	{
 		$this->tableName = $tableName;
+	}
+
+	public function setWhere($where): void
+	{
+		$this->where = $where;
+	}
+
+	public function getWhere()
+	{
+		return $this->where;
 	}
 
 	public function getColumns()
@@ -27,9 +38,15 @@ class Select
 		$this->columns = $columns;
 	}
 
-	public function getSQL(): string
+	public function getSQL()
 	{
-		return 'SELECT ' . $this->columns . ' FROM ' . $this->tableName; 
+		$sql = 'SELECT ' . $this->columns . ' FROM ' . $this->tableName;
+
+		if(!empty($this->where))
+		{
+			$sql .= ' WHERE ' . $this->where;
+		} 
+		return $sql;
 	}
 	public function execute()
 	{
