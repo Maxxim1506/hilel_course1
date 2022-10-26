@@ -2,6 +2,7 @@
 namespace App\Models;
 use Core\orm\Select;
 use Core\orm\Insert;
+// homework
 class User
 {
     public function getAll (): array {
