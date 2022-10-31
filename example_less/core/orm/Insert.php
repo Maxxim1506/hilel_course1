@@ -57,6 +57,7 @@ class Insert
 	{
 		$connect = new Connector();
 		$PDO = $connect->connect();
+		var_dump($this->getSQL($this->column, $this->values));
 		return $PDO->query($this->getSQL($this->column, $this->values));
 	}
 }
