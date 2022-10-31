@@ -9,12 +9,14 @@ class AuthController
 {
 	public function login()
 	{
+		// var_dump($result);
+		var_dump($_SESSION['users']);
 		$data = array_filter($_POST);
 		
 		if (!empty($data))
 		{
 			$obj = new User();
-			$result = $obj->auth($data['email'], $data['password']);
+			$_SESSION['users'] = $result = $obj->auth($data['email'], $data['password']);
 			var_dump($result);
 		}
 

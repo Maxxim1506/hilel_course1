@@ -12,16 +12,18 @@ class Router {
     {
         $this->exp = substr($_SERVER["REQUEST_URI"], 29);
         $this->config = include_once (__DIR__) . '/../app/config/config.php';
+        var_dump($_SERVER["REQUEST_URI"]);
     }
 
     public function run ()
     {
         // array_key_exists($this->exp, $this->config));
         // var_dump($this->exp);
+
         if (array_key_exists($this->exp, $this->config)) {
             $classPath = 'App\Controllers\\' . $this->getClassName();
         } else {
-            $classPath = new Err404();
+            $classPath = 'App\Controllers\Err404';
         }
 
         if (class_exists($classPath)) {
@@ -40,15 +42,20 @@ class Router {
 
     private function getMethodName (): string
     {
-        $expmethod = explode(':', $this->config[$this->exp]);
-        return $expmethod [1];
+        $expmethod = '';
+        if(isset($this->config[$this->exp])){
+            $expmethod = explode(':', $this->config[$this->exp]);
+            $expmethod = $expmethod[1];
+        }
+        return $expmethod;
     }
 
     private function getClassName (): string
     {
         $exp = explode(':', $this->config[$this->exp]);
-        return $exp [0];
+        return $exp[0];
     }
+
 }
 
 

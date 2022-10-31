@@ -6,7 +6,7 @@ return [
     'admin'=>'Admin:index',
     'admin/home'=> 'Admin:index',
     'admin/home/edit' => 'Admin:edit',
-    'user'=> 'User:index',
+    'users'=> 'User:index',
     'contacts/edit'=>'Contacts:edit',
     'posts/edit'=>'Posts:edit',
     'user/edit'=> 'User:edit',
@@ -14,5 +14,9 @@ return [
     'posts'=>'Posts:index',
     'login'=>'AuthController:login',
     'register'=>'AuthController:register',
+    'user/delete'=>'User:delete',
+    'user/update'=>'User:update',
+    'user/view'=>'User:view'
+
 ];
 // homework
