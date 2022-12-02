@@ -18,7 +18,7 @@ class Color
         return $this->blue;
     }
 
-    private function setBlue(int $blue)
+    private function setBlue(int $blue): void
     {
         if ($blue < 0 || $blue > 255) {
             throw new \Exception("invalid");
