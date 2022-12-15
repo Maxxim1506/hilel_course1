@@ -7,40 +7,14 @@ class Contact {
     private $phone;
     private $address;
 
-    public function __construct(string $name, $surname, $email, $phone, $address)
+    public function __construct(ContactBuilder $builder)
     {
-        $this->name = $name;
-        $this->surname = $surname;
-        $this->email = $email;
-        $this->phone = $phone;
-        $this->address = $address;
+        $this->name = $builder->name;
+        $this->surname = $builder->surname;
+        $this->email = $builder->email;
+        $this->phone = $builder->phone;
+        $this->address = $builder->address;
     }
-
-//    public function getName()
-//    {
-//        return $this->name;
-//    }
-//
-//    public function getSurname()
-//    {
-//        return $this->surname;
-//    }
-//
-//    public function getEmail()
-//    {
-//        return $this->email;
-//    }
-//
-//    public function getPhone()
-//    {
-//        return $this->phone;
-//    }
-//
-//    public function getAddress()
-//    {
-//        return $this->address;
-//    }
-
 }
 
 interface BuilderInterface
@@ -93,7 +67,7 @@ class ContactBuilder implements BuilderInterface
 
     public function build(): Contact
     {
-        return new Contact($this->name, $this->surname, $this->email, $this->phone, $this->address);
+        return new Contact($this);
 
     }
 }
