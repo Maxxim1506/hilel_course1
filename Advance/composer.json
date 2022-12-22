@@ -1,0 +1,27 @@
+{
+    "name": "name/name",
+    "type": "project",
+    "description": "test.",
+    "keywords": [
+        "test"
+    ],
+    "license": "MIT",
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Advance\\Src\\": "Src",
+            "Advance\\abstractFactory\\": "abstractFactory/",
+            "Config\\": "Config/",
+            "App\\": "App/"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "larapack/dd": "^1.1",
+        "ext-pdo": "*"
+    }
+}

@@ -1,12 +1,20 @@
 <?php 
 namespace Core\orm;
 use Core\orm\common\Connector;
+use Core\orm\Where;
 
 class Select 
 {
 	protected $tableName;
 	protected $columns = '*';
-	protected $where = '';
+	protected $where;
+
+	public function where($condition)
+	{
+		$this->where = new Where();
+		$this->where->setWhere($condition); 
+
+	}
 
 	public function getTableName()
 	{
@@ -44,8 +52,9 @@ class Select
 
 		if(!empty($this->where))
 		{
-			$sql .= ' WHERE ' . $this->where;
+			$sql .=$this->where->getWhere();
 		} 
+		var_dump($sql);
 		return $sql;
 	}
 	public function execute()
