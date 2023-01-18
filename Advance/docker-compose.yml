@@ -1,7 +1,7 @@
 version: "3.8"
 
 volumes:
-  db_volumes:
+  db_volume:
     driver: local
 
 networks:
@@ -13,23 +13,21 @@ services:
     image: "mysql:8"
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: secret
     ports:
-      - "3306:3306"
+      - "8000:80"
     volumes:
-      - /var/lib/mysql
+      - "db_volume:/var/lib/mysql"
     networks:
       - php_advanced
-
-
-  php:
+  app:
     #    image: "php:8.1-apache"
     build:
       context: .docker/
     restart: always
-    ports:
-      - "80:80"
     volumes:
       - .:/var/www/html
+    ports:
+      - "80:80"
     networks:
       - php_advanced

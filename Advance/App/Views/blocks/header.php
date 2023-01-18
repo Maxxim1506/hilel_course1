@@ -10,4 +10,3 @@
 </head>
 <body>
 <?php \Core\View::render('navs/main'); ?>
-

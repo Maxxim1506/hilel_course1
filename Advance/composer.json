@@ -1,27 +1,18 @@
 {
-    "name": "name/name",
-    "type": "project",
-    "description": "test.",
-    "keywords": [
-        "test"
-    ],
-    "license": "MIT",
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
+  "name": "root/html",
+  "autoload": {
+    "psr-4": {
+      "Config\\": "Config/",
+      "Core\\": "Core/",
+      "App\\": "App/"
     },
-    "autoload": {
-        "psr-4": {
-            "Advance\\Src\\": "Src",
-            "Advance\\abstractFactory\\": "abstractFactory/",
-            "Config\\": "Config/",
-            "App\\": "App/"
-        }
-    },
-    "require": {
-        "vlucas/phpdotenv": "^5.5",
-        "larapack/dd": "^1.1",
-        "ext-pdo": "*"
-    }
+    "files": [
+      "Config/helpers.php"
+    ]
+  },
+  "require": {
+    "larapack/dd": "^1.1",
+    "ext-pdo": "*",
+    "vlucas/phpdotenv": "^5.5"
+  }
 }
